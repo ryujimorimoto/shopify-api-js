@@ -23,7 +23,7 @@ export function getTestExpressApp() {
 
 export function headers({
   hmac = 'fake',
-  topic = 'PRODUCTS_CREATE',
+  topic = 'products/create',
   domain = 'shop1.myshopify.io',
   webhookId = '123456789',
   lowercase = false,
