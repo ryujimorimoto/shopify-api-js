@@ -335,7 +335,7 @@ See [Access modes](https://shopify.dev/apps/auth/oauth/access-modes) for more de
    </div><div>:warning: After
 
    ```ts
-   const sessionId = await shopify.session.getCurrentId({
+   const sessionId = await shopify.api.session.getCurrentId({
      isOnline: true,
      rawRequest: req,
      rawResponse: res,
@@ -386,7 +386,7 @@ The constructor for each API client that this package provides now takes an obje
    </div><div>:warning: After
 
    ```ts
-   const restClient = new shopify.clients.Rest({session});
+   const restClient = new shopify.api.clients.Rest({session});
    ```
 
    </div>
@@ -405,7 +405,7 @@ The constructor for each API client that this package provides now takes an obje
    </div><div>:warning: After
 
    ```ts
-   const graphqlClient = new shopify.clients.Graphql({session});
+   const graphqlClient = new shopify.api.clients.Graphql({session});
    ```
 
    </div>
@@ -424,7 +424,7 @@ The constructor for each API client that this package provides now takes an obje
    </div><div>:warning: After
 
    ```ts
-   const storefrontClient = new shopify.clients.Storefront({
+   const storefrontClient = new shopify.api.clients.Storefront({
      session,
      storefrontAccessToken,
    });
